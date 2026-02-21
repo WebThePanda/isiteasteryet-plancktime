@@ -1,4 +1,3 @@
-
 function formatWithSpaces(numberString) {
     return numberString.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
@@ -34,24 +33,3 @@ document.addEventListener("DOMContentLoaded", function() {
     
     setInterval(updateCountdown, 1000);
 });
-
-
-Decimal.set({ precision: 60 });
-
-function formatWithSpaces(numberString) {
-  return numberString.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-}
-
-function convert(secondsInput) {
-  const PLANCK_TIME = new Decimal("5.391e-44");
-  const seconds = new Decimal(secondsInput);
-
-  const planckTimes = seconds.div(PLANCK_TIME);
-  const fullNumber = planckTimes.toFixed();
-
-  return formatWithSpaces(fullNumber);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    console.log(convert(1));
-})
