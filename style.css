@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-items: center;
+}
+
+.hashtag {
+    color: rgb(111, 192, 244);
+}
+
+.value {
+    color: rgb(234, 123, 49);
+}
