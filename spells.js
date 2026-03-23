@@ -3,7 +3,7 @@ function formatWithSpaces(numberString) {
   }
 
 function updateCountdown() {
-    const targetDate = new Date('2026-03-30T18:00:00+01:00');
+    const targetDate = new Date('2026-04-01T09:00:00+01:00');
 
     const now = new Date();
 
