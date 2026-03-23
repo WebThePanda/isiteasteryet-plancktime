@@ -16,7 +16,7 @@ function updateCountdown() {
 
     const planckTime = new Decimal('5.391e-44')
 
-    const seconds = new Decimal(Math.floor(difference / 1000));
+    const seconds = new Decimal(difference).div(1000);
 
     const planck = seconds.div(planckTime).floor();
 
@@ -24,12 +24,11 @@ function updateCountdown() {
 
     const formattedPlanck = formatWithSpaces(fullNumber);
     document.getElementById("plancktime").textContent = formattedPlanck;
+
+    requestAnimationFrame(updateCountdown)
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    
-    updateCountdown();
-    
-    setInterval(updateCountdown, 1000);
+document.addEventListener("DOMContentLoaded", function() {    
+    requestAnimationFrame(updateCountdown);
 });
